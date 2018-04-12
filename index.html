@@ -9,20 +9,26 @@
         margin: 0;            /* Reset default margin */
     }
     iframe {
-        display: block;       /* iframes are inline by default */
-        background: #000;
         border: none;         /* Reset default border */
-        height: 100vh;        /* Viewport-relative units */
-        width: 100vw;
+        height: 800px;        /* Viewport-relative units */
+        width: 600px;
+        padding: 0;
+    }
+    .inner{
+        margin: 5em 10em 0 5em;
     }
     </style>
 </head>
 
 <body>
-  <h1>Welcome to Beautiful Data City</h1>
-  <p>First project coming soon to <strong>TORONTO</strong>.</p>
-  <h3>Test plot</h3>
-  <iframe  id="mm-plot-stocks" src="https://mm-plot-stocks.herokuapp.com/" seamless="seamless"></iframe>
+    <div class="inner">
+      <h1>Welcome to Beautiful Data City</h1>
+      <p>First project coming soon to <strong>TORONTO</strong>.</p>
+      <center>
+          <h3>Test plot</h3>
+          <iframe  id="mm-plot-stocks" src="https://mm-plot-stocks.herokuapp.com/" seamless="seamless"></iframe>
+      </center>
+    </div>
 </body>
 
 </html>
