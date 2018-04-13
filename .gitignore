@@ -1,0 +1,8 @@
+_site
+Gemfile.lock
+.sass-cache
+.asset-cache
+.jekyll-metadata
+.DS_Store
+=*
+.access

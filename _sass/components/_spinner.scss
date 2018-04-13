@@ -1,0 +1,23 @@
+/* Spinner */
+
+.infinite-spinner {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #333;
+  margin: 60px auto;
+  z-index: 10000;
+  animation: scaleout 1.0s infinite ease-in-out;
+}
+
+@keyframes scaleout {
+  0% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 100% {
+    transform: scale(2.0);
+    -webkit-transform: scale(2.0);
+    opacity: 0;
+  }
+}

@@ -1,34 +1,75 @@
+---
+---
 <!DOCTYPE html>
 <html>
 
 <head>
-  <title>Beautiful Data City</title>
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <style>
-     body {
-        margin: 0;            /* Reset default margin */
-    }
-    iframe {
-        border: none;         /* Reset default border */
-        height: 800px;        /* Viewport-relative units */
-        width: 600px;
-        padding: 0;
-    }
-    .inner{
-        margin: 5em 10em 0 5em;
-    }
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ site.description }}">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="{{ page.url | replace:'index.html', '' | absolute_url }}">
+    <link rel="shortcut icon" href="/favicon.ico?v=1.1"> {% seo %}
+    <title>Beautiful Data City</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        iframe {
+            border: none;
+            /* Reset default border */
+            height: 800px;
+            /* Viewport-relative units */
+            width: 600px;
+            padding: 0;
+        }
     </style>
 </head>
 
 <body>
+    <header id="header">
+        <div class="inner">
+            <center>
+                <a href="{{ site.url | absolute_url }}" class="logo">
+                    <span class="title">{{ site.title }}</span>
+                </a>
+            </center>
+        </div>
+    </header>
     <div class="inner">
-      <h1>Welcome to Beautiful Data City</h1>
-      <p>First project coming soon to <strong>TORONTO</strong>.</p>
-      <center>
-          <h3>Test plot</h3>
-          <iframe  id="mm-plot-stocks" src="https://mm-plot-stocks.herokuapp.com/" seamless="seamless"></iframe>
-      </center>
+        <center>
+            <header>
+                <p>First project coming soon to <strong>TORONTO</strong>.</p>
+            </header>
+            <h3>Test plot</h3>
+            <div class="plotwrap">
+                <iframe id="mm-plot-stocks" src="https://mm-plot-stocks.herokuapp.com/" seamless="seamless" class="plot closed"></iframe>
+            </div>
+        </center>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/assets/js/skel.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <!-- [if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif] -->
+    <script src="/assets/js/main.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var $plot = $(".plot");
+
+            $plot.before(
+                '<div class="infinite-spinner-loader">\
+                <div class="infinite-spinner"></div>\
+                </div>'
+            );
+
+            $plot.on('load', function() {
+                window.setTimeout(function() {
+                    $(".infinite-spinner-loader").empty();
+                    $(".infinite-spinner-loader").addClass("closed");
+                    $plot.removeClass("closed");
+                }, 1000);
+            });
+        });
+    </script>
 </body>
 
 </html>

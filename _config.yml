@@ -1,0 +1,25 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site infor for SEO tag
+title: "Beautiful Data City"
+description: "Beautiful Data City is a data visualization blog that analyzes local data and posts easy-to-understand visuals and analyses. Our goal is to make data more approachable and fun."
+url: "https://www.beautifuldata.city"
+baseurl: "/"
+author: "Beautiful Data City"
+
+# Sass
+sass:
+    sass_dir: _sass
+    style: compressed
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: none
+plugins:
+    - jekyll-seo-tag

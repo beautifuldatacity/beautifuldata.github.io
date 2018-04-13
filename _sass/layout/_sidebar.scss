@@ -1,0 +1,49 @@
+/* Sidebar */
+
+#sidebar{
+    @include vendor('display', 'flex');
+    @include vendor('flex-wrap', 'wrap');
+
+    > div {
+        border-top: solid (_size(border-width) * 2) _palette(accent1);
+        padding: 1em 0;
+        width: 100%;
+
+        > h2, p, div, form {
+            margin: 0.5em 0;
+        }
+
+        > ul.icons {
+            margin: -1em 0 .5em -1em
+        }
+
+        &:first-child{
+            border-top: none;
+        }
+
+        @include breakpoint(medium) {
+            &.pub-date,
+            &.authors,
+            &.tags,
+            &.share {
+                width: 50%;
+            }
+            &.subscribe,
+            &.related-posts {
+                display: none;
+            }
+            &:first-child{
+                border-top: solid (_size(border-width) * 2) _palette(accent1);
+            }
+        }
+
+        @include breakpoint(xsmall) {
+            &.pub-date,
+            &.authors,
+            &.tags,
+            &.share {
+                width: 100%;
+            }
+        }
+    }
+}
