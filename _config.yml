@@ -6,11 +6,11 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site infor for SEO tag
-title: "Beautiful Data City"
-description: "Beautiful Data City is a data visualization blog that analyzes local data and posts easy-to-understand visuals and analyses. Our goal is to make data more approachable and fun."
-url: "https://www.beautifuldata.city"
+title: "Beautiful Data"
+description: "Beautiful Data is a data visualization blog that aims to make data approachable."
+url: "https://www.beautifuldata.co"
 baseurl: "/"
-author: "Beautiful Data City"
+author: "Beautiful Data Co."
 
 # Sass
 sass:

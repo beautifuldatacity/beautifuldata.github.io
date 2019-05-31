@@ -38,7 +38,7 @@
     <div class="inner">
         <center id="main">
             <header>
-                <p>Closed.</p>
+                <p>Closed. Will open someday...</p>
             </header>
         </center>
         <center id="footer">
@@ -54,25 +54,6 @@
     <script src="/assets/js/util.js"></script>
     <!-- [if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif] -->
     <script src="/assets/js/main.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            var $plot = $(".plot");
-
-            $plot.before(
-                '<div class="infinite-spinner-loader">\
-                <div class="infinite-spinner"></div>\
-                </div>'
-            );
-
-            $plot.on('load', function() {
-                window.setTimeout(function() {
-                    $(".infinite-spinner-loader").empty();
-                    $(".infinite-spinner-loader").addClass("closed");
-                    $plot.removeClass("closed");
-                }, 1000);
-            });
-        });
-    </script>
 </body>
 
 </html>
